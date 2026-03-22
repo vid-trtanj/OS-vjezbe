@@ -1,0 +1,54 @@
+Zadatak 1:
+
+pwd
+ls
+mkdir vjezba1 && cd vjezba1
+touch README.md 
+cd ~
+
+Zadatak 2:
+
+mkdir vjezba2
+touch vjezba2/file.txt
+cp vjezba2/file.txt vjezba2/file_copy.txt
+ls vjezba2/
+rm vjezba2/file.txt
+cd ~
+rmdir vjezba2
+Ne može se pobrisati direktorij jer se file_copy.txt nalazi u direktoriju. rmdir može pobrisati samo prazne direktorije.
+
+Zadatak 3:
+
+mkdir -p vjezba3/backup
+touch vjezba3/notes.txt vjezba3/todo.txt vjezba3/script.sh
+cp vjezba3/*.txt vjezba3/backup/
+rm vjezba3/script.sh && ls vjezba3/
+mkdir vjezba3/backup/$USER
+mv vjezba3/backup/*.txt vjezba3/backup/$USER/
+
+Zadatak 4:
+
+mkdir -p vjezba4/subfolder
+touch vjezba4/$HOSTNAME
+mv vjezba4/$HOSTNAME vjezba4/$USER
+mv vjezba4/$USER vjezba4/subfolder/
+rm ~/vjezba4/subfolder/$USER
+
+Zadatak 5:
+
+mkdir vjezba5
+touch vjezba5/$RANDOM.num
+ls vjezba5/ # Ovime provjeravam ako je datoteka kreirana.
+cp vjezba5/*.num vjezba5/backup.num
+mkdir vjezba5/backup
+mv vjezba5/backup.num vjezba5/backup/
+
+Zadatak 6:
+
+mkdir ~/Documents/vjezba6
+touch ~/Documents/vjezba6/OS_script.md ~/Documents/vjezba6/notes.txt
+mkdir ~/Documents/vjezba6/scripts
+mv ~/Documents/vjezba6/OS_script.md ~/Documents/vjezba6/scripts/
+mv ~/Documents/vjezba6/notes.txt ~/Documents/vjezba6/todo.txt
+cd ~/Documents/vjezba6/scripts
+rm ../todo.txt
